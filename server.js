@@ -6,6 +6,24 @@ app.listen(3000, function(){
 });
 
 const budget = require("./models/budget.js")
+const bankAccount = 
+
+
+// app.use((req, res, next) => {
+//     console.log("I run for all routes")
+//     next()
+//   })
+app.use(express.urlencoded({extended: false }));
+
+
+app.get("/budgets/new", (req, res)=>{
+    res.render("new.ejs")
+  })
+
+app.post("/budgets", (req, res) => {
+    budget.push(req.body)
+    res.redirect("/budgets");
+  })
 
 app.get("/", (req, res)=>{
     res.send("Budgtr App");
