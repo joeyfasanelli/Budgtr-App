@@ -6,7 +6,6 @@ app.listen(3000, function(){
 });
 
 const budget = require("./models/budget.js")
-const bankAccount = 
 
 
 // app.use((req, res, next) => {
